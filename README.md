@@ -1,1 +1,3 @@
-# formulario_de_validacao
+# Simples Formulario de Validação
+## Foco da sua criação foi utilizar framework como Jquery
+Onde eu poderia criar validações
