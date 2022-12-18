@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Validação</title>
+    <style>
+        .error {
+            color: #f00;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+</head>
+<body>
+
+    <h1 align="center">Formulário</h1>
+
+    <form name="frmCadastro" id="frmCadastro" method="POST" action="">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- começo lado 1-->
+                <div class="col-4" style="width: 600px">
+
+                    <div>
+                        <div>Nome Completo:</div>
+                        <div><input type="text" id="nome" name="nome" size=50 placeholder="Digite o seu nome"></div>
+                        <div>CPF:</div>
+                        <div><input type="text" name="cpf" id="cpf" onkeypress="$(this).mask('000.000.000-00')"></div>
+                    </div>
+
+                    <div>
+                        <div>Endereço:</div>
+                        <div><input type="text" name="endereco" size=50></div>
+                        <div>Número:</div>
+                        <div><input type="number" name="numero" size=10></div>
+                        <div>Telefone Residencial:</div>
+                        <div><input type="text" name="telres" id="telres" onkeypress="$(this).mask('0000-0000')"
+                                placeholder="9999-9999"></div>
+                    </div>
+                    <div>
+                        <div>Telefone Celular:</div>
+                        <div><input type="text" name="telcel" id="telcel" onkeypress="$(this).mask('(00) 0 0000-0000')">
+                        </div>
+                        <div>Bairro:</div>
+                        <div><input type="text" name="bairro"></div>
+                        <div>Cidade:</div>
+                        <div><input type="text" name="cidade"></div>
+                    </div>
+
+                </div>
+
+                <!--barramento de div's-->
+
+
+                <!--começo lado 2-->
+                <div class="col-3">
+                    <div>
+                        <div>CEP: </div>
+                        <div><input type="text" name="cep" id="cep" onkeypress="$(this).mask('00.000-000')"></div>
+                        <div>UF:</div>
+                        <div>
+                            <select name="uf">
+                                <option value="AM">AM</option>
+                                <option value="AP">AP</option>
+                                <option value="CE" selected>CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="RN">RN</option>
+                                <option value="SP">SP</option>
+                            </select>
+                        </div>
+                        <div>E-mail:</div>
+                        <div><input type="email" name="email" id="email"></div>
+                    </div>
+                    <div>
+                        <div>Placa de veículo:</div>
+                        <div><input type="text" name="placa" id="placa" onkeypress="$(this).mask('AAA-0000')"></div>
+                        <div>Data de Nascimento</div>
+                        <div><input type="text" name="dataNasc" onkeypress="$(this).mask('00/00/0000') " id="dataNasc">
+                        </div>
+                    </div>
+                    <div>
+                        <div> Usuário </div>
+                        <div><input type="text" name="usuario" id="usuario"></div>
+                    </div>
+                    <div>
+                        <div>Senha:</div>
+                        <div><input type="text" name="senha" id="senha"></div>
+                    </div>
+                    <div>Confirma senha:</div>
+                    <div><input type="text" name="confsenha" id="confsenha"></div>
+
+                </div>
+                <!--final lado 2-->
+            </div>
+
+
+            <div class="modal-footer justify-content-center">
+                <button type="submit" class="btn btn-primary">Enviar para o Banco</button>
+                <button type="reset" class="btn btn-warning">Limpar Formulário</button>
+            </div>
+        </div>
+    </form>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/jquery_validation/lib/jquery-3.1.1.js"></script>
+<script src="js/jquery-mask/dist/jquery.mask.min.js"></script>
+<script src="js/jquery_validation/dist/jquery.validate.js"></script>
+<script src="js/jquery_validation/dist/additional-methods.js"></script>
+<script src="js/jquery_validation/dist/localization/messages_pt_BR.js"></script>
+<script src="js/validar.js"></script>
+
+<!--william 2 informatica-->
+</body>
+</html>
